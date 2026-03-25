@@ -24,9 +24,13 @@
     --switch-bg-url: url(./assets/sun.svg);
 }
 
+/* parte do desafio criando transição ao mudar o fundo */
+
 body{
     background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
+
+    transition: background 0.4s;
 }
 
 body *{
@@ -44,8 +48,17 @@ body *{
     text-align: center;
     padding: 24px;
 }
+/*Animando e arredondando a imagem */
+
 #profile img {
     width: 112px;
+
+    transition: transform 0.3s;
+    border-radius: 50%;
+}
+
+.light #profile img {
+  transform: scale(1.05);
 }
 
 #profile p{
